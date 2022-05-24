@@ -1,12 +1,15 @@
-import React from 'react'
+import React , {useState}from 'react'
 import { Routes, Route, HashRouter} from 'react-router-dom'
-
+import NavigationBar from '../components/navigation_bar/NavigationBar.jsx'
 const SinglePage = () => {
+  const [language, setLanguage] = useState("spanish");
+
   return (
     <HashRouter>    
       <Routes>
-          <Route exact path="/" element = {<div> main</div>}/>
-          <Route exact path="/game" element = {<div> game</div>}/>
+          <Route exact path="/" element = {
+            <NavigationBar language = {language}/>
+          }/>
       </Routes>    
     </HashRouter>
   )
