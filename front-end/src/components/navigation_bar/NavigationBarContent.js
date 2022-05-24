@@ -1,10 +1,10 @@
 const keys = [
         "languaje-tag",
-        "about-item",
-        "contact-item", 
-        "web-projects-item",
-        "other-projects-item",
-        "programm-languages-and-tec-item"
+        "about",
+        "contact", 
+        "web-projects",
+        "other-projects",
+        "programm-languages-and-tec"
 ]
 const spanishValues = [
     "Español",
