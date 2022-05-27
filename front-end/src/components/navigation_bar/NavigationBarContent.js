@@ -12,7 +12,7 @@ const spanishValues = [
     "Contacto", 
     "Proyectos web",
     "Otros proyectos",
-    "Lenguajes de programación y tecnologías"
+    "Lenguajes y tecnologías"
 ]
 const englishhValues = [
     "English",
@@ -20,7 +20,7 @@ const englishhValues = [
     "Contact", 
     "My web projects",
     "Other projects non web related",
-    "Programming languajes and technologies"
+    "Languajes and technologies"
 ]
 
 const content = new Map()

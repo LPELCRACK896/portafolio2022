@@ -10,19 +10,20 @@
     padding: 5px 1px;
     overflow: hidden;
     transition: height 1s;
+    z-index: 1;
 
 }
 .navigation-bar-main-wrapper-show-all-options{
     position: fixed;
     width: 100%;
-    height: 600px;
+    height: 550px;
     background-color: $amz-blue;
     color: white;
     display: flex; 
     padding: 5px 1px;
     overflow: hidden;
     transition: height 1s;
-
+    z-index: 1;
 }
 .question-mark-on-nav-bar-no-all-options{
     width: 5%;
@@ -48,6 +49,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between; 
+    white-space: nowrap;
     font-size: 2em;
 }
 .container-arrow-down-on-nav-bar{
@@ -157,17 +159,52 @@ a {
     .navigation-bar-main-wrapper{
         height: 40px;
     }
-    .name-on-nav-bar{
-        width: 85%;
+    .navigation-bar-main-wrapper-no-show-all-options{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: $amz-blue;
+        color: white;
+        display: flex; 
+        padding: 5px 1px;
+        overflow: hidden;
+        transition: height 1s;
+        z-index: 1;
+    
+    }
+    .navigation-bar-main-wrapper-show-all-options{
+        position: fixed;
+        width: 100%;
+        height: 100%px;
+        background-color: $amz-blue;
+        color: white;
+        display: flex; 
+        padding: 5px 1px;
+        overflow: hidden;
+        transition: height 1s;
+        z-index: 1;
+    }
+    .question-mark-on-nav-bar-no-all-options {
+        display: none;
+    }
+    .question-mark-on-nav-bar-all-options{ display: none;}
+    .ul-options-on-nav{
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margins */
         display: flex;
         flex-direction: column;
-        align-items: center;
-        font-size: 1em;
-        gap: 5px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
     }
-    .question-mark-on-nav-bar{
-        width: 5%;
-        height: 60%;
+    .item-on-navigation{
+        display: flex;
+        font-size: large;
+        width: 100%;
+        border-radius: 30px;
+         &:hover{
+             background-color: #24203e66;
+         }
     }
-    
 }

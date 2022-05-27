@@ -1,0 +1,128 @@
+@import "../variables";
+
+.web-project-item-card{
+    position: relative;;
+    flex: 1, 1, 0;
+    height: 350px;
+    width: 735px;
+    background-color: white;
+
+}
+.front-card-web-project-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:hover::before{
+        content: '';
+        background-color: rgb(80, 78, 78);
+        opacity: 60%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: background-color 0.5s ease-out 100ms
+    }
+    &:hover::after{
+        position: absolute;
+        content: 'Ver detalles';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        transition: content 0.5s ease-out 100ms
+
+    }
+    &::before{
+        content: '';
+        opacity: 60%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: background-color 0.5s ease-out 100ms
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        transition: content 0.5s ease-out 100ms
+
+
+    }
+}
+
+.card-item-image-spaceArt{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.tech-logos{
+    display: flex;
+    height: 12%;
+    overflow: hidden;
+    justify-content: center;
+    gap: 10px;
+}
+.card-back-header-web-project{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overview-into-back-part-card-web{
+    color: $amz-blue;
+    font-family: arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+.other-titles-into-back-part-card-web{
+    color: $amz-blue;
+    font-family: arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.back-part-overview-space{
+    padding: 2% 5%;
+    color: $amz-blue;
+    height: 30%;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.back-part-overview-space::-webkit-scrollbar {
+    display: none;
+}
+.title-into-card-item-web-project{
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin-top: 10px;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 735px) { 
+    .web-project-item-card{
+        flex: 1, 1, 0;
+        height: 300px;
+        width: 300px;
+    }
+    .title-into-card-item-web-project{
+        font-size: larger;
+    }
+}

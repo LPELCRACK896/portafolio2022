@@ -1,0 +1,65 @@
+@import "../variables";
+
+.resume-section-wrapper{
+    background-color: whitesmoke;  
+    position: relative;
+    width: 100%;
+    height: 300px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: scroll;
+
+}
+.resume-section-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+.cmd-buttons-section{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: $section-header-blue;
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 10px;
+    gap: 10px;
+    padding-top: 5px;
+
+}
+.button-on-cmd{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    &:hover::after{
+        position: absolute;
+        content: 'x';
+        transform: translate(7px, 0px);
+    }
+
+}
+
+.texto-en-resume{
+    color: $section-header-blue;
+    font-size: large;
+}
+.name-on-resume-section{
+    color: $section-header-blue;
+    font-size: 40px;
+
+}
+.programm-lang{
+    &:hover{
+        color: $green-selected;
+    }
+}
+
+@media (max-width: 700px) { 
+    .resume-section-wrapper{
+        background-color: whitesmoke;  
+        position: relative;
+        width: 100%;
+        height: 350px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        overflow: scroll;
+    }
+}
