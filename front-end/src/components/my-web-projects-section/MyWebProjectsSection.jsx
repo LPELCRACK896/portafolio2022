@@ -19,7 +19,7 @@ import JSCSSHTMLLogo from '../../../storage/JSCSSHTMLLogo.png'
 import LibraryLogo from '../../../storage/LibraryLogo.png'
 import { Link } from 'react-router-dom'
 
-var cards_info = [
+const cards_info = [
     {   
         name: 'Esqueleto biblioteca',
         image: HtmlLogo,
@@ -80,23 +80,23 @@ const MyWebProjectsSection = ({limit}) => {
     const cards = cards_info.filter((element, index)=> (limit?(index<parseInt(limit)):true))
     return (
         <div className='my-web-projects-section-wrapper'>
-        <div className='title-section-on-web-projects-section'>
-        My web projects
-        </div>
-        <div className='content-in-my-web-projects-section'>
-            {cards.map((element, index) =>{
-                let type=1;
-                if((index+1)%2 == 1) {type = 0}
-                return( <WebProjectItem card_info={element} type={type}/>)
+            <div className='title-section-on-web-projects-section'>
+                My web projects
+            </div>
+            <div className='content-in-my-web-projects-section'>
+                {cards.map((element, index) =>{
+                    let type=1;
+                    if((index+1)%2 == 1) {type = 0}
+                    return( <WebProjectItem card_info={element} type={type} key={index}/>)
 
-            })}
-            <Link to='/web-projects' style={{width: '100%'}}>
-                <div className=' boton-ver-todos-en-web-projects-section '>
-                        Ver todos
-                </div>
-            </Link>
+                })}
+                <Link to='/web-projects' style={{width: '100%'}}>
+                    <div className='boton-ver-todos-en-web-projects-section '>
+                            Ver todos
+                    </div>
+                </Link>
 
-        </div>
+            </div>
     </div> 
     )
 }

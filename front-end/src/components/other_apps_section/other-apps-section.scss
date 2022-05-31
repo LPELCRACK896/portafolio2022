@@ -1,0 +1,27 @@
+@import "../variables";
+
+.other-projects-section-wrapper{
+    color: whitesmoke;  
+    position: relative;
+    width: 100%;
+    border: 1px solid $section-header-blue;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: scroll;
+}
+.other-projects-section-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.title-section-on-other-projects-section{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: $section-header-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    gap: 10px;
+    font-size: 2.3em;
+}

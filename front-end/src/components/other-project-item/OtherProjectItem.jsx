@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
-import './web-project-item-style.scss'
+import './other-project-item-style.scss'
 import ReactCardFlip from 'react-card-flip';
 import HtmlLogo from '../../../storage/html-logo.png'
 import ExpressLogo from '../../../storage/ExpressLogo.png'
@@ -16,6 +16,9 @@ import GithubLogo from '../../../storage/GithubLogo.png'
 import CssLogo from '../../../storage/CssLogo.png'
 import JavascriptLogo from '../../../storage/JavascriptLogo.png'
 import NginxLogo from '../../../storage/NginxLogo.png'
+import PythonLogo from '../../../storage/PythonLogo.png'
+import JavaLogo from '../../../storage/JavaLogo.png'
+
 import {FaChevronLeft} from 'react-icons/fa'
 
 const platforms = new Map([
@@ -34,21 +37,23 @@ const technologies = new Map([
   ['webpack', WebpackLogo],
   ['css',CssLogo ],
   ['js', JavascriptLogo],
-  ['nginx', NginxLogo]
+  ['nginx', NginxLogo],
+  ['python', PythonLogo],
+  ['java', JavaLogo]
 ])
-const WebProjectItem = (props) => {
+const OtherProjectItem = (props) => {
   const [isFliped, setIsFliped]=useState(false);
   const { card_info } = props
   const { type } = props
   return (
-    <ReactCardFlip isFlipped = {isFliped} className='web-project-item-card'  >
+    <ReactCardFlip isFlipped = {isFliped} className='other-project-item-card'  >
       {/* Parte de adelante  */}
-      <div className='web-project-item-card front-card-web-project-item' style={{ backgroundColor: `${card_info.color}`  }}  onClick={()=> setIsFliped(!isFliped)}>
+      <div className='front-card-web-project-item other-project-item-card ' style={{ backgroundColor: `${card_info.color}`  }}  onClick={()=> setIsFliped(!isFliped)}>
           <img src={card_info.image} alt="tec" style={{height: '40%', order: type===0?0:1}} className="selectable-logo-on-back-card"></img>
           <div className='title-into-card-item-web-project' style={{color: `${card_info.color}`,  order:type===0?1:0}}>{card_info.name}</div>
       </div>
       {/* PARTE DE ATRAS */}
-      <div className='web-project-item-card' style={{border: `2px solid ${card_info.color}`,}}>
+      <div className='other-project-item-card' style={{border: `2px solid ${card_info.color}`,}}>
         <FaChevronLeft onClick={()=> setIsFliped(!isFliped)} style={{fontSize: "30px", color:"#0E0C1D", cursor: 'pointer', position:"absolute", top: "0px", left: "0px"}}/>
         <div className='card-back-header-web-project'>
           <h4 className='overview-into-back-part-card-web'>Resumen</h4>
@@ -71,4 +76,4 @@ const WebProjectItem = (props) => {
   )
 }
 
-export default WebProjectItem
+export default OtherProjectItem

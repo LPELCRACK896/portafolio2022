@@ -62,9 +62,14 @@
 .tech-logos{
     display: flex;
     height: 12%;
-    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     justify-content: center;
     gap: 10px;
+}
+.tech-logos::-webkit-scrollbar {
+    display: none;
 }
 .card-back-header-web-project{
     margin-top: 10px;
@@ -124,5 +129,14 @@
     }
     .title-into-card-item-web-project{
         font-size: larger;
+    }
+    .other-titles-into-back-part-card-web{
+        font-size: 1.5em;
+    }
+    .overview-into-back-part-card-web{
+        font-size: 1.5em;
+    }
+    .back-part-overview-space{
+        font-size: 0.8em;
     }
 }

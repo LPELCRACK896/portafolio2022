@@ -1,13 +1,22 @@
-import React , {useState}from 'react'
+import React , {useState, useEffect}from 'react'
 import { Routes, Route, HashRouter} from 'react-router-dom'
 import MyWebProjectsSection from '../components/my-web-projects-section/MyWebProjectsSection.jsx';
 import NavigationBar from '../components/navigation_bar/NavigationBar.jsx'
+import OtherAppsSection from '../components/other_apps_section/OtherAppsSection.jsx';
 import ProgrammResume from '../components/programm-resume/ProgrammResume.jsx';
 import ResumeSectionCmd from '../components/resume_section_cmd/ResumeSectionCmd.jsx';
 import './single_page_style.scss'
+
 const SinglePage = () => {
   const [language, setLanguage] = useState("spanish");
   const [route, setRoute] = useState("/");
+  const goToTop = () =>{
+    document.getElementsByClassName('content-in-page').scrollTo(0,0)
+  }
+  useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
+
   return (
 
     <HashRouter>  
@@ -19,6 +28,7 @@ const SinglePage = () => {
             <div className='content-in-page'>
               <ResumeSectionCmd />
               <MyWebProjectsSection limit={4}/>
+              <OtherAppsSection />
             </div>
           }/>
           <Route  path="/about" element = {
@@ -37,6 +47,7 @@ const SinglePage = () => {
           }/>
           <Route exact path="/other-projects" element = {
             <div className='content-in-page'>
+              ola
           </div>
           }/>
           <Route  path="/programm-languages-and-tec" element = {

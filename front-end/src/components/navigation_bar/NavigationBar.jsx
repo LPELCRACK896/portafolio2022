@@ -28,7 +28,7 @@ const NavigationBar = (props) => {
                 <nav className={isDisplayingExtraOptions?'navigation-options-show':'navigation-options-no-show'}> 
                     <ul className='ul-options-on-nav'>
                         {navBarItems.map((item, index) => 
-                        <li className='item-on-navigation' 
+                        <li key={index}className='item-on-navigation' 
                             onClick={()=> { 
                                 setSelected(item)
                                 setIsDisplayingExtraOptions(false)

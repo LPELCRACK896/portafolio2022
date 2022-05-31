@@ -41,16 +41,18 @@
     justify-content: center;
     align-items: center;
     height: 100px;
-    background-color: $section-header-blue;
+    background-color:  $red-exit;
     font-size: 2em;
     &:hover{
         background-color: #24203e66;
     }
 }
 
+@media (max-width: 700px) { 
 
-.my-web-projects-section-wrapper{
+    .my-web-projects-section-wrapper{
 
-    height: 1600px;
+        height: 1400px;
 
+    }
 }
