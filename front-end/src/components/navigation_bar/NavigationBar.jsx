@@ -16,9 +16,9 @@ const NavigationBar = (props) => {
             directions.push(key)
         } })
     return (
-        <div className={isDisplayingExtraOptions?'navigation-bar-main-wrapper-show-all-options':'navigation-bar-main-wrapper-no-show-all-options'}>
+        <header className={isDisplayingExtraOptions?'navigation-bar-main-wrapper-show-all-options':'navigation-bar-main-wrapper-no-show-all-options'}>
             <FaQuestion className={isDisplayingExtraOptions?'question-mark-on-nav-bar-all-options':'question-mark-on-nav-bar-no-all-options'}/>
-            <header className='name-on-nav-bar'>
+            <div className='name-on-nav-bar'>
                 <Link to="/" className='item-on-navigation'  
                     onClick={()=> { 
                         setSelected("main")
@@ -40,7 +40,7 @@ const NavigationBar = (props) => {
                 <div className='container-arrow-down-on-nav-bar' onClick={() =>setIsDisplayingExtraOptions(!isDisplayingExtraOptions)}>
                     <FaArrowDown className={isDisplayingExtraOptions?'arrow-up-on-nav-bar':'arrow-down-on-nav-bar'}/>
                 </div>
-            </header>
+            </div>
             <div className='language-on-nav-bar'>
                 <div className='logo-container-on-nav-bar'>
                     <div className={ `logo-language-${language}-on-nav-bar`}/>
@@ -48,7 +48,7 @@ const NavigationBar = (props) => {
                 {content.get("languaje-tag")}
             </div>
 
-        </div>
+        </header>
     )
 }
 

@@ -1,5 +1,7 @@
 import React , {useState, useEffect}from 'react'
 import { Routes, Route, HashRouter} from 'react-router-dom'
+import ContactMe from '../components/contact-me-section/ContactMe.jsx';
+import Footer from '../components/footer/Footer.jsx';
 import MyWebProjectsSection from '../components/my-web-projects-section/MyWebProjectsSection.jsx';
 import NavigationBar from '../components/navigation_bar/NavigationBar.jsx'
 import OtherAppsSection from '../components/other_apps_section/OtherAppsSection.jsx';
@@ -29,11 +31,12 @@ const SinglePage = () => {
               <ResumeSectionCmd />
               <MyWebProjectsSection limit={4}/>
               <OtherAppsSection />
+              <ContactMe />
             </div>
           }/>
           <Route  path="/about" element = {
             <div className='content-in-page'>
-              <ResumeSectionCmd />
+              <ResumeSectionCmd on="all-page"/>
             </div>
           }/>
           <Route  path="/contact" element = {
@@ -61,7 +64,7 @@ const SinglePage = () => {
           }/>
       </Routes>
       {/* Common elements  on bottom*/} 
-           
+      <Footer />     
            
       {/* Ends common elements on bottom*/}    
     </HashRouter>

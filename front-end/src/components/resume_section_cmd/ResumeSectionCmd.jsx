@@ -2,10 +2,10 @@ import React , {useEffect} from 'react'
 import './resume_section_cmd_style.scss'
 import { Link } from 'react-router-dom'
 
-const ResumeSectionCmd = () => {
+const ResumeSectionCmd = ({on}) => {
 
   return (
-    <div className='resume-section-wrapper'>
+    <div className='resume-section-wrapper' style={on?on==='all-page'?{height: '100%'}:{}:{}}>
         <div className='cmd-buttons-section'>
             <div className='button-on-cmd' style={{backgroundColor: '#DF5959'}}></div>
             <div className='button-on-cmd' style={{backgroundColor: '#FDBC2E'}}></div>
