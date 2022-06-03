@@ -41,16 +41,17 @@ const SinglePage = () => {
           }/>
           <Route  path="/contact" element = {
             <div className='content-in-page'>
+              <ContactMe />
           </div>
           }/>
           <Route  path="/web-projects" element = {
               <div className='content-in-page'>
-                wep projectss
+                <MyWebProjectsSection />
             </div>
           }/>
           <Route exact path="/other-projects" element = {
             <div className='content-in-page'>
-              ola
+              <OtherAppsSection />
           </div>
           }/>
           <Route  path="/programm-languages-and-tec" element = {
